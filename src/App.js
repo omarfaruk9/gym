@@ -11,6 +11,7 @@ import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 import Footer from './components/Shared/Footer/Footer';
 import Header from './components/Shared/Header/Header';
 import Login from './components/Shared/Login/Login';
+import NotFound from './components/Shared/NotFound/NotFound';
 import AuthProvider from './Context/AuthProvider';
 
 function App() {
@@ -43,6 +44,9 @@ function App() {
             </Route>
             <Route exact path="/register">
               <Register></Register>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
             </Route>
           </Switch>
           <Footer></Footer>

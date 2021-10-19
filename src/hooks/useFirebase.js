@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../firebase/Firebase.init";
-import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signOut, updateProfile, onAuthStateChanged } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signOut, updateProfile, onAuthStateChanged, sendEmailVerification, GithubAuthProvider } from "firebase/auth";
 
 const useFirebase = () => {
     initializeAuthentication();
@@ -16,6 +16,7 @@ const useFirebase = () => {
     const auth = getAuth();
     // providers
     const googleProvider = new GoogleAuthProvider();
+    const gitHubProvider = new GithubAuthProvider();
 
     // input 
     const userName = e => {
@@ -33,7 +34,7 @@ const useFirebase = () => {
         setIsLoading(true)
         signInWithPopup(auth, googleProvider)
             .then(result => {
-                console.log(result.user);
+                // console.log(result.user);
                 setUser(result.user)
             })
             .finally(() => setIsLoading(false))
@@ -77,9 +78,30 @@ const useFirebase = () => {
             createUserWithEmailAndPassword(auth, email, password)
                 .then(result => {
                     userDisplayname();
-                    setUser(result.user)
+                    setUser(result.user);
+                    varificationEmail();
                 })
         }
+    }
+
+    // git hub 
+    const handleGitHubSing = () => {
+        setIsLoading(true)
+        signInWithPopup(auth, gitHubProvider)
+            .then(result => {
+                // const { displayName, photoURL, email } = result.user;
+                // console.log(user);
+                setUser(result.user)
+            })
+            .finally(() => setIsLoading(false))
+    }
+
+    // email varification 
+    const varificationEmail = () => {
+        sendEmailVerification(auth.currentUser)
+            .then(result => {
+                // console.log(result);
+            })
     }
     // log out 
     const logOut = () => {
@@ -100,7 +122,8 @@ const useFirebase = () => {
         userEmail,
         userName,
         handaleSignUp,
-        userDisplayname
+        userDisplayname,
+        handleGitHubSing
 
     }
 }

@@ -30,3 +30,10 @@
     margin-bottom: 10px;
     /* text-decoration: none !important; */
 }
+
+.user-img {
+    width: 55px;
+    height: 55px;
+    border: 2px solid gray;
+    border-radius: 50%;
+}

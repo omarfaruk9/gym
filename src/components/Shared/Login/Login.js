@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const Login = () => {
-    const { logInWithGoogle, handaleSignUp } = useAuth();
+    const { logInWithGoogle, handaleSignUp, handleGitHubSing } = useAuth();
     // console.log(logInWithGoogle);
     return (
         <div>
@@ -44,17 +44,19 @@ const Login = () => {
                                 <Button
                                     onClick={logInWithGoogle}
                                     variant="primary mt-3" type="submit">
-                                    Log In With Google
+                                    <i className="fab fa-google"></i> Log In With Google
                                 </Button>
                                 <br />
-                                <Button variant="primary mt-3" type="submit">
-                                    Log In With Facebook
+                                <Button
+                                    onClick={handleGitHubSing}
+                                    variant="primary mt-3" type="submit">
+                                    <i class="fab fa-github mx-2"></i> Log In With Git Hub
                                 </Button>
                             </div>
                         </div>
 
                         <div className=" login-img">
-                            <img src={img} className="img-fluid" alt="" />
+                            <img src={img} className="img-fluid user-img" alt="" />
                         </div>
                     </div>
                 </div>
