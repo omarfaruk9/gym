@@ -10,10 +10,6 @@ const Login = () => {
     // console.log(logInWithGoogle);
     return (
         <div>
-            <div className="login-banner">
-
-            </div>
-
             <div className="login-form mt-5">
 
                 <div className="container">

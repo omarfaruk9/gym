@@ -1,7 +1,7 @@
 import React from 'react';
 
 const GalleryDetails = (props) => {
-    console.log(props);
+    // console.log(props);
     const { img } = props.gallery;
     return (
         <div className="">

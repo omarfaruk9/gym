@@ -8,7 +8,7 @@ const Register = () => {
     const { userName, userEmail, userPassword, handaleSignUp } = useFirebase();
     return (
         <div className="container">
-            <h1>Register</h1>
+            <h1 className="text-center my-5">Please Registration</h1>
             <div className="row row-cols-lg-2">
                 <div className="ragister-img">
                     <img src={img} className="img-fluid" alt="" />

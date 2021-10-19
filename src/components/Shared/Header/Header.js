@@ -3,10 +3,10 @@ import './Header.css';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import logo from '../../../images/logo.jpg'
 import { Link } from 'react-router-dom';
-import useFirebase from '../../../hooks/useFirebase';
+import useAuth from '../../../hooks/useAuth';
 
 const Header = () => {
-    const { user, logOut, handleRegister } = useFirebase();
+    const { user, logOut, handaleSignUp } = useAuth();
     // console.log(user)
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -17,11 +17,11 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto">
-                        <Link className="ms-3" to="/home">Home</Link>
-                        <Link className="ms-3" to="/service">Service</Link>
-                        <Link className="ms-3" to="/gallery">Gallery</Link>
-                        <Link className="ms-3" to="/blog">Blog</Link>
-                        {user.email && <p className="text-light ms-2"> {user.displayName}</p>}
+                        <Link className="ms-3 text-decoration-none fw-bolder" to="/home">Home</Link>
+                        <Link className="ms-3 text-decoration-none fw-bolder" to="/service">Service</Link>
+                        <Link className="ms-3 text-decoration-none fw-bolder" to="/gallery">Gallery</Link>
+                        <Link className="ms-3 text-decoration-none fw-bolder" to="/blog">Blog</Link>
+                        {user.email && <h5 className="text-light ms-2"> {user.displayName}</h5>}
                         {
                             user?.email && <img className="user-img mx-2" src={user?.photoURL} alt="" />
                         }
@@ -32,10 +32,11 @@ const Header = () => {
                                     className="btn btn-danger ms-3">Log Out</button> :
                                 <Link to="/login">
                                     <button
+                                        onClick={handaleSignUp}
                                         className="btn ms-3 btn-success btn-outline-dark">Login</button>
                                 </Link>
                         }
-                        <Link className="ms-3" to="/register">Register</Link>
+                        <Link className="ms-3 text-decoration-none fw-bolder" to="/register">Register</Link>
 
 
                     </Nav>

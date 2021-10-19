@@ -28,7 +28,9 @@ const Service = (props) => {
                         {service_info}
                     </p>
                     <Link to={`/serviceDetails/${_id}`}>
-                        <div className="btn btn-danger mb-3">Details</div>
+                        <div className="btn btn-danger mb-3">Details
+                            <i class="fas mx-2 fa-info-circle"></i>
+                        </div>
                     </Link>
                 </div>
             </div>
