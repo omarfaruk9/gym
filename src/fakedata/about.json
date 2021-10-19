@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "name": "FREE FITNESS TRAINING",
+        "img": "https://i.ibb.co/25PQKk2/icons-1.jpg",
+        "info": "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth."
+    },
+    {
+        "id": "2",
+        "name": "TONS OF CARDIO & STRENGTH",
+        "img": "https://i.ibb.co/v3bNdhG/icons-2.jpg",
+        "info": "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth."
+    },
+    {
+        "id": "3",
+        "name": "NO COMMENTMENT MEMBERSHIPS",
+        "img": "https://i.ibb.co/nnjH4s7/icons-3.jpg",
+        "info": "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth."
+    }
+]

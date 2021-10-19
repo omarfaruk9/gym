@@ -1,0 +1,21 @@
+.trainer-img {
+    overflow: hidden;
+}
+
+.trainer-img img {
+    width: 100%;
+    height: 255px;
+    transition: all 1s ease-in-out;
+}
+
+.trainer-img:hover img {
+    transform: scale(1.3);
+}
+
+.trainer-img {
+    transition: all 1s ease-in-out;
+}
+
+.trainer-text:hover h4 {
+    color: green;
+}

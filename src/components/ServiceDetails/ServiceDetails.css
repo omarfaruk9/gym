@@ -1,0 +1,19 @@
+/* .service-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+} */
+
+.details-img img {
+    width: 100%px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+/* .details-text {
+    margin-left: 20px;
+} */
+
+.service-details {
+    margin: 0;
+}

@@ -1,0 +1,31 @@
+.testimonal-img {
+    overflow: hidden;
+    width: 100%;
+    padding: 50px 0;
+    background-image: url(../../images/slide/portfolio-1.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    animation: slide 20s infinite step-end;
+    /* height: 50hv; */
+    height: 100%;
+}
+
+@keyframes slide {
+    25% {
+        background-image: url(../../images/slide/portfolio-2.jpg);
+    }
+    50% {
+        background-image: url(../../images/slide/portfolio-3.jpg);
+    }
+    75% {
+        background-image: url(../../images/slide/portfolio-4.jpg);
+    }
+    100% {
+        background-image: url(../../images/slide/portfolio-1.jpg);
+    }
+}
+
+/* .testimonal-img:hover img {
+    transform: scale(1.3);
+} */

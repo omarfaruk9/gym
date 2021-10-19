@@ -1,0 +1,44 @@
+[
+    {
+        "_id": "1",
+        "service_name": "Basic Plan",
+        "service_charge": "35",
+        "service_info": "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.",
+        "img": "https://i.ibb.co/dJ08Tp7/32963462200-c88f4dda63-b-e1489109082609-650x387.jpg"
+    },
+    {
+        "_id": "2",
+        "service_name": "BEGINNER PLAN",
+        "service_charge": "59",
+        "service_info": "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.",
+        "img": "https://i.ibb.co/mTc7PPg/7.jpg"
+    },
+    {
+        "_id": "3",
+        "service_name": "PREMIUM PLAN",
+        "service_charge": "99",
+        "service_info": "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.",
+        "img": "https://i.ibb.co/WFGmrn8/210308-gym-masks-bd-2x1.jpg"
+    },
+    {
+        "_id": "4",
+        "service_name": "ULTIMATE PLAN",
+        "service_charge": "135",
+        "service_info": "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.",
+        "img": "https://i.ibb.co/ZxKj2xz/how-to-maximize-your-time-at-the-gym-fitness-nation-bedford.jpg"
+    },
+    {
+        "_id": "5",
+        "service_name": "Special Plane",
+        "service_charge": "155",
+        "service_info": "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.",
+        "img": "https://i.ibb.co/5KR9VvM/gettyimages-1227597608.jpg"
+    },
+    {
+        "_id": "6",
+        "service_name": "Children with Sports",
+        "service_charge": "69",
+        "service_info": "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.",
+        "img": "https://i.ibb.co/3mZrVMB/Exercising-together-Happy-father-and-son-exercising-with-dumbbells-and-smiling-while-standing-in-hea.jpg"
+    }
+]
