@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const Login = () => {
-    const { logInWithGoogle, handaleSignUp, handleGitHubSing } = useAuth();
+    const { logInWithGoogle, handaleSignUp, handleGitHubSing, userPassword, userEmail, error } = useAuth();
     // console.log(logInWithGoogle);
     return (
         <div>
@@ -18,9 +18,10 @@ const Login = () => {
 
                         <div className="mt-5">
                             <h1 className="fw-bolder mb-3">Log In <span className="text-success">Please</span></h1>
+
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label>Email address</Form.Label>
-                                <Form.Control type="email" placeholder="Enter email" />
+                                <Form.Control onBlur={userEmail} type="email" placeholder="Enter email" />
                                 <Form.Text className="text-muted">
                                     We'll never share your email with anyone else.
                                 </Form.Text>
@@ -28,7 +29,7 @@ const Login = () => {
 
                             <Form.Group className="mb-3" controlId="formBasicPassword">
                                 <Form.Label>Password</Form.Label>
-                                <Form.Control type="password" placeholder="Password" />
+                                <Form.Control onBlur={userPassword} type="password" placeholder="Password" />
                             </Form.Group>
                             <Button
                                 onClick={handaleSignUp}
@@ -41,6 +42,7 @@ const Login = () => {
                                     <span>Go for Register</span>
                                 </Link>
                                 <span className="d-block fw-bolder text-muted">----------------------------------or----------------------------------</span>
+                                <p className="text-danger">{error}</p>
                                 <Button
                                     onClick={logInWithGoogle}
                                     variant="primary mt-3" type="submit">

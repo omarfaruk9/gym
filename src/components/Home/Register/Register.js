@@ -5,7 +5,7 @@ import img from '../../../images/f2.png'
 import useFirebase from '../../../hooks/useFirebase';
 
 const Register = () => {
-    const { userName, userEmail, userPassword, handaleSignUp } = useFirebase();
+    const { userName, userEmail, userPassword, handaleSignUp, error } = useFirebase();
     return (
         <div className="container">
             <h1 className="text-center my-5">Please Registration</h1>
@@ -40,6 +40,7 @@ const Register = () => {
                         <Form.Group className="mb-3" controlId="formBasicCheckbox">
                             <Form.Check type="checkbox" label="Check me out" />
                         </Form.Group>
+                        <h3 className="danger">{error}</h3>
                         <Button
                             onClick={handaleSignUp}
                             variant="primary" type="submit">

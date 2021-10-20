@@ -11,6 +11,7 @@ const useFirebase = () => {
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
 
 
     const auth = getAuth();
@@ -36,8 +37,12 @@ const useFirebase = () => {
             .then(result => {
                 // console.log(result.user);
                 setUser(result.user)
+                setError('');
             })
-            .finally(() => setIsLoading(false))
+            .finally(() => {
+                setIsLoading(false);
+                setError('already email used');
+            })
     }
 
     // observe user state change
@@ -69,9 +74,11 @@ const useFirebase = () => {
         });
     }
 
-    const handaleSignUp = () => {
-
+    const handaleSignUp = (e) => {
+        // e.preventDefault();
         if (password.length < 6) {
+            setError('Passowrd must be at least 6 chareckter');
+
             return;
         }
         else {
@@ -80,6 +87,10 @@ const useFirebase = () => {
                     userDisplayname();
                     setUser(result.user);
                     varificationEmail();
+                    setError('')
+
+                }).catch(error => {
+                    setError(error.message);
                 })
         }
     }
@@ -91,9 +102,13 @@ const useFirebase = () => {
             .then(result => {
                 // const { displayName, photoURL, email } = result.user;
                 // console.log(user);
-                setUser(result.user)
+                setUser(result.user);
+                setError('');
             })
-            .finally(() => setIsLoading(false))
+            .finally(() => {
+                setIsLoading(false)
+                setError('already email used');
+            })
     }
 
     // email varification 
@@ -114,6 +129,7 @@ const useFirebase = () => {
     }
 
     return {
+        error,
         user,
         logOut,
         isLoading,

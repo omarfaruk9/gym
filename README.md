@@ -2,7 +2,7 @@
 
 <!-- <h3>Live Site Link <span> https://ecstatic-johnson-7ee4a0.netlify.app/</span></h3> -->
 
-<h3>Live Site Link Fire Base Hosting: <span> https://fitness-bd-a2b9f.web.app/</span></h3>
+<h3>Live Site Link Firebase Hosting: <span> https://fitness-bd-a2b9f.web.app/</span></h3>
 
 <h3> Why Need Good Health</h3>
 </hr>

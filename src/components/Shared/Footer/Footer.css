@@ -1,5 +1,13 @@
 .footer {
     /* height: 50vh; */
+    background-color: #332929;
     margin-top: 130px;
     padding: 50px 0;
+}
+
+.icons i {
+    border: 2px solid grey;
+    padding: .5rem;
+    border-radius: 50%;
+    color: white;
 }
